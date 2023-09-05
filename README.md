@@ -10,17 +10,17 @@
 ![downloads][downloads-image]
 
 [//]: # "badges"
-[crate-image]: https://img.shields.io/crates/v/rust-lib-template?label=latest
-[crate-link]: https://crates.io/crates/rust-lib-template
-[doc-image]: https://img.shields.io/docsrs/rust-lib-template
-[doc-link]: https://docs.rs/rust-lib-template
+[crate-image]: https://img.shields.io/crates/v/naming-conventions?label=latest
+[crate-link]: https://crates.io/crates/naming-conventions
+[doc-image]: https://img.shields.io/docsrs/naming-conventions
+[doc-link]: https://docs.rs/naming-conventions
 [msrv-image]: https://img.shields.io/badge/rustc-1.68+-blue.svg
-[build-image]: https://github.com/vhidvz/rust-lib-template/actions/workflows/ci.yml/badge.svg
-[build-link]: https://github.com/vhidvz/rust-lib-template/actions/workflows/ci.yml
+[build-image]: https://github.com/vhidvz/naming-conventions/actions/workflows/ci.yml/badge.svg
+[build-link]: https://github.com/vhidvz/naming-conventions/actions/workflows/ci.yml
 [license-image]: https://img.shields.io/github/license/vhidvz/workflow-js?style=flat
 [license-link]: https://github.com/vhidvz/workflow-js/blob/master/LICENSE
-[codecov-image]: https://raw.githubusercontent.com/vhidvz/rust-lib-template/main/docs/coverage/badges/flat.svg
-[codecov-link]: https://htmlpreview.github.io/?https://github.com/vhidvz/rust-lib-template/blob/main/docs/coverage/index.html
-[deps-image]: https://deps.rs/repo/github/vhidvz/rust-lib-template/status.svg
-[deps-link]: https://deps.rs/repo/github/vhidvz/rust-lib-template
-[downloads-image]: https://img.shields.io/crates/d/rust-lib-template.svg
+[codecov-image]: https://raw.githubusercontent.com/vhidvz/naming-conventions/main/docs/coverage/badges/flat.svg
+[codecov-link]: https://htmlpreview.github.io/?https://github.com/vhidvz/naming-conventions/blob/main/docs/coverage/index.html
+[deps-image]: https://deps.rs/repo/github/vhidvz/naming-conventions/status.svg
+[deps-link]: https://deps.rs/repo/github/vhidvz/naming-conventions
+[downloads-image]: https://img.shields.io/crates/d/naming-conventions.svg
