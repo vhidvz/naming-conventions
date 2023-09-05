@@ -1,0 +1,1 @@
+window.ALL_CRATES = ["log","rust_lib_template"];

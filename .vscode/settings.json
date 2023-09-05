@@ -1,0 +1,12 @@
+{
+  "cSpell.words": [
+    "clippy",
+    "codecov",
+    "dotenv",
+    "msrv",
+    "rustfmt",
+    "rustup",
+    "vahid"
+  ],
+  "rust-analyzer.linkedProjects": ["./Cargo.toml"]
+}

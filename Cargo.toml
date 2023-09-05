@@ -1,0 +1,30 @@
+[package]
+name = "naming-conventions"
+description = "Naming Conventions"
+
+edition = "2021"
+version = "1.0.3"
+rust-version = "1.68"
+
+authors = ["Vahid V. <vhid.vz@gmail.com>"]
+
+# https://crates.io/category_slugs
+categories = ["text-editors", "text-processing"]
+
+keywords = ["conventions", "naming-conventions"]
+documentation = "https://docs.rs/naming-conventions"
+homepage = "https://github.com/vhidvz/naming-conventions"
+repository = "https://github.com/vhidvz/naming-conventions.git"
+
+license = "MIT"
+exclude = ["renovate.json", "docs/", "docs.sh", ".*"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.20"
+regex = "1.9.5"
+
+[dev-dependencies]
+dotenv = "0.15.0"
+env_logger = "0.10.0"
