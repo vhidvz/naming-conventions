@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["is_macro_case","to_macro_case"],"struct":["MacroCase"]};

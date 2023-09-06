@@ -1,6 +1,18 @@
-use crate::conventions::to_no_case;
+use crate::{conventions::to_no_case, Convention};
 
 use regex::{Error, Regex};
+
+pub struct FlatCase;
+
+impl Convention for FlatCase {
+    fn to(&self, string: &str) -> Result<String, Error> {
+        to_flat_case(string)
+    }
+
+    fn is(&self, string: &str) -> Result<bool, Error> {
+        is_flat_case(string)
+    }
+}
 
 pub fn to_flat_case(string: &str) -> Result<String, Error> {
     let no_case = to_no_case(string)?.to_lowercase();

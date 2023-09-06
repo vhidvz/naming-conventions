@@ -57,9 +57,33 @@
 <a href="#57" id="57">57</a>
 <a href="#58" id="58">58</a>
 <a href="#59" id="59">59</a>
-</pre></div><pre class="rust"><code><span class="kw">use crate</span>::{conventions::to_no_case, tool};
+<a href="#60" id="60">60</a>
+<a href="#61" id="61">61</a>
+<a href="#62" id="62">62</a>
+<a href="#63" id="63">63</a>
+<a href="#64" id="64">64</a>
+<a href="#65" id="65">65</a>
+<a href="#66" id="66">66</a>
+<a href="#67" id="67">67</a>
+<a href="#68" id="68">68</a>
+<a href="#69" id="69">69</a>
+<a href="#70" id="70">70</a>
+<a href="#71" id="71">71</a>
+</pre></div><pre class="rust"><code><span class="kw">use crate</span>::{conventions::to_no_case, tool, Convention};
 
 <span class="kw">use </span>regex::{Captures, Error, Regex};
+
+<span class="kw">pub struct </span>PascalCase;
+
+<span class="kw">impl </span>Convention <span class="kw">for </span>PascalCase {
+    <span class="kw">fn </span>to(<span class="kw-2">&amp;</span><span class="self">self</span>, string: <span class="kw-2">&amp;</span>str) -&gt; <span class="prelude-ty">Result</span>&lt;String, Error&gt; {
+        to_pascal_case(string)
+    }
+
+    <span class="kw">fn </span>is(<span class="kw-2">&amp;</span><span class="self">self</span>, string: <span class="kw-2">&amp;</span>str) -&gt; <span class="prelude-ty">Result</span>&lt;bool, Error&gt; {
+        is_pascal_case(string)
+    }
+}
 
 <span class="kw">pub fn </span>to_pascal_case(string: <span class="kw-2">&amp;</span>str) -&gt; <span class="prelude-ty">Result</span>&lt;String, Error&gt; {
     <span class="kw">let </span>replacement =

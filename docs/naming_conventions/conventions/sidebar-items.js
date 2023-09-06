@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["is_camel_case","is_flat_case","is_kebab_case","is_macro_case","is_no_case","is_pascal_case","is_snake_case","is_train_case","to_camel_case","to_flat_case","to_kebab_case","to_macro_case","to_no_case","to_pascal_case","to_snake_case","to_train_case"]};
+window.SIDEBAR_ITEMS = {"mod":["camel_case","flat_case","kebab_case","macro_case","no_case","pascal_case","snake_case","train_case"]};

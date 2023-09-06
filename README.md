@@ -9,6 +9,27 @@
 [![dependency status][deps-image]][deps-link]
 ![downloads][downloads-image]
 
+Simple and Fast naming convention library.
+
+## Quick Start Guide
+
+```rust
+use naming_conventions::{get_convention, CaseName};
+
+fn main() {
+  let snake_case = get_convention(CaseName::SnakeCase);
+
+  let string = "camelCase";
+
+  println!("string to snake_case: {}", snake_case.to(string).unwrap());
+  println!("string is snake_case: {}", snake_case.is(string).unwrap());
+}
+```
+
+## License
+
+[MIT](https://github.com/vhidvz/naming-conventions/blob/main/LICENSE)
+
 [//]: # "badges"
 [crate-image]: https://img.shields.io/crates/v/naming-conventions?label=latest
 [crate-link]: https://crates.io/crates/naming-conventions

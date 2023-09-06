@@ -1,6 +1,18 @@
-use crate::conventions::to_no_case;
+use crate::{conventions::to_no_case, Convention};
 
 use regex::{Error, Regex};
+
+pub struct MacroCase;
+
+impl Convention for MacroCase {
+    fn to(&self, string: &str) -> Result<String, Error> {
+        to_macro_case(string)
+    }
+
+    fn is(&self, string: &str) -> Result<bool, Error> {
+        is_macro_case(string)
+    }
+}
 
 pub fn to_macro_case(string: &str) -> Result<String, Error> {
     let no_case = to_no_case(string)?.to_uppercase();

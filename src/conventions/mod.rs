@@ -1,11 +1,11 @@
-mod camel_case;
-mod flat_case;
-mod kebab_case;
-mod macro_case;
-mod no_case;
-mod pascal_case;
-mod snake_case;
-mod train_case;
+pub mod camel_case;
+pub mod flat_case;
+pub mod kebab_case;
+pub mod macro_case;
+pub mod no_case;
+pub mod pascal_case;
+pub mod snake_case;
+pub mod train_case;
 
 pub use camel_case::*;
 pub use flat_case::*;

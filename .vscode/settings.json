@@ -5,6 +5,7 @@
     "dotenv",
     "flatcase",
     "msrv",
+    "println",
     "rustfmt",
     "rustup",
     "vahid",

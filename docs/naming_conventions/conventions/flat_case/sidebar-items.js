@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["is_flat_case","to_flat_case"],"struct":["FlatCase"]};

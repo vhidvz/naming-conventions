@@ -1,6 +1,18 @@
-use crate::{conventions::to_no_case, tool};
+use crate::{conventions::to_no_case, tool, Convention};
 
 use regex::{Captures, Error, Regex};
+
+pub struct TrainCase;
+
+impl Convention for TrainCase {
+    fn to(&self, string: &str) -> Result<String, Error> {
+        to_train_case(string)
+    }
+
+    fn is(&self, string: &str) -> Result<bool, Error> {
+        is_train_case(string)
+    }
+}
 
 pub fn to_train_case(string: &str) -> Result<String, Error> {
     let replacement =
@@ -9,12 +21,12 @@ pub fn to_train_case(string: &str) -> Result<String, Error> {
             Ok(haystack[m.start()..m.end()].to_uppercase())
         };
 
-    let no_case = to_no_case(&string)?;
+    let no_case = to_no_case(&string)?.to_lowercase();
 
     let mut haystack = String::from(" ");
     haystack.push_str(&no_case);
 
-    let re = Regex::new(r"[^\w][a-zA-Z]").unwrap();
+    let re = Regex::new(r"[^\w][a-z]").unwrap();
     let result = tool::replace_all(&re, &haystack, replacement, &None)?;
 
     let re = Regex::new(r"\s+").unwrap();

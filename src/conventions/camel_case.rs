@@ -1,6 +1,18 @@
-use crate::{conventions::to_no_case, tool};
+use crate::{conventions::to_no_case, tool, Convention};
 
 use regex::{Captures, Error, Regex};
+
+pub struct CamelCase;
+
+impl Convention for CamelCase {
+    fn to(&self, string: &str) -> Result<String, Error> {
+        to_camel_case(string)
+    }
+
+    fn is(&self, string: &str) -> Result<bool, Error> {
+        is_camel_case(string)
+    }
+}
 
 pub fn to_camel_case(string: &str) -> Result<String, Error> {
     let replacement =

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["is_no_case","to_no_case"],"struct":["NoCase"]};

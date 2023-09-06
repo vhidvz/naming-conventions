@@ -1,6 +1,18 @@
-use crate::tool;
+use crate::{tool, Convention};
 
 use regex::{Captures, Error, Regex};
+
+pub struct NoCase;
+
+impl Convention for NoCase {
+    fn to(&self, string: &str) -> Result<String, Error> {
+        to_no_case(string)
+    }
+
+    fn is(&self, string: &str) -> Result<bool, Error> {
+        is_no_case(string)
+    }
+}
 
 pub fn to_no_case(string: &str) -> Result<String, Error> {
     let replacement =

@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"mod":["conventions"],"trait":["Convention"]};
+window.SIDEBAR_ITEMS = {"enum":["CaseName"],"fn":["get_convention"],"mod":["conventions"],"trait":["Convention"]};
