@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["no_case"]};
+window.SIDEBAR_ITEMS = {"mod":["conventions"],"trait":["Convention"]};

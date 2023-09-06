@@ -8,8 +8,8 @@ pub fn to_snake_case(string: &str) -> Result<String, Error> {
     let re = Regex::new(r"\s+").unwrap();
     let result = re.replace_all(&no_case, "_").to_string();
 
-    log::debug!(target: "convention::snake_case::to_snake_case", "'{}' changed to '{}' (snake_case).", string, result.trim());
-    Ok(re.replace_all(&no_case, "_").to_string())
+    log::debug!(target: "convention::snake_case::to_snake_case", "'{}' changed to '{}' (snake_case).", string, result);
+    Ok(result)
 }
 
 pub fn is_snake_case(string: &str) -> Result<bool, Error> {

@@ -3,10 +3,12 @@
     "clippy",
     "codecov",
     "dotenv",
+    "flatcase",
     "msrv",
     "rustfmt",
     "rustup",
     "vahid",
+    "vahidvakili",
     "vakili"
   ],
   "rust-analyzer.linkedProjects": ["./Cargo.toml"]
