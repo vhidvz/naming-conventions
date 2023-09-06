@@ -3,7 +3,7 @@ name = "naming-conventions"
 description = "Naming Conventions"
 
 edition = "2021"
-version = "1.0.0"
+version = "1.0.1"
 rust-version = "1.68"
 
 authors = ["Vahid V. <vhid.vz@gmail.com>"]

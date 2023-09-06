@@ -21,8 +21,19 @@ fn main() {
 
   let string = "camelCase";
 
-  println!("string to snake_case: {}", snake_case.to(string).unwrap());
-  println!("string is snake_case: {}", snake_case.is(string).unwrap());
+  println!("to snake_case: {}", snake_case.to(string).unwrap());
+  println!("is snake_case: {}", snake_case.is(string).unwrap());
+}
+```
+
+```rust
+use naming_conventions::{to_snake_case, is_snake_case};
+
+fn main() {
+  let string = "camelCase";
+
+  println!("to snake_case: {}", to_snake_case(string).unwrap());
+  println!("is snake_case: {}", is_snake_case(string).unwrap());
 }
 ```
 
