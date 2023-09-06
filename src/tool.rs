@@ -19,7 +19,7 @@ pub fn replace_all<ReplacementOptions>(
     }
 
     new.push_str(&haystack[last_match..]);
-    log::debug!(target: "tool::replace-all","'{haystack}' changed to '{new}' by regex replacement.");
+    log::debug!(target: "tool::replace_all","'{haystack}' changed to '{new}' by regex replacement.");
     Ok(new)
 }
 

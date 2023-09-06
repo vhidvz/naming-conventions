@@ -8,7 +8,7 @@ pub fn to_snake_case(string: &str) -> Result<String, Error> {
     let re = Regex::new(r"\s+").unwrap();
     let result = re.replace_all(&no_case, "_").to_string();
 
-    log::debug!(target: "convention::snake_case", "'{}' changed to '{}' (snake_case).", string, result.trim());
+    log::debug!(target: "convention::snake_case::to_snake_case", "'{}' changed to '{}' (snake_case).", string, result.trim());
     Ok(re.replace_all(&no_case, "_").to_string())
 }
 
@@ -38,7 +38,7 @@ mod tests {
     fn test_is_snake_case() {
         tests::init();
 
-        let result = is_snake_case("vahid vakili").unwrap();
+        let result = is_snake_case("vahid_vakili").unwrap();
         assert_eq!(result, true);
 
         let result = is_snake_case("vahid_Vakili").unwrap();

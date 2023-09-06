@@ -21,7 +21,7 @@ pub fn to_no_case(string: &str) -> Result<String, Error> {
     let re = Regex::new(r"(\s|[_-])+").unwrap();
     let result: String = tool::replace_all(&re, &result, replacement, &Some(false)).unwrap();
 
-    log::debug!(target: "convention::no-case", "'{}' changed to '{}' (no case).", string, result.trim());
+    log::debug!(target: "convention::no_case::to_no_case", "'{}' changed to '{}' (no case).", string, result.trim());
     Ok(result.trim().into())
 }
 
