@@ -1,9 +1,10 @@
 use regex::{Captures, Error, Regex};
 
-pub fn replace_all(
+pub fn replace_all<ReplacementOptions>(
     re: &Regex,
     haystack: &str,
-    replacement: impl Fn(&str, &Captures) -> Result<String, Error>,
+    replacement: impl Fn(&str, &Captures, &Option<ReplacementOptions>) -> Result<String, Error>,
+    options: &Option<ReplacementOptions>,
 ) -> Result<String, Error> {
     let mut new = String::with_capacity(haystack.len());
 
@@ -12,12 +13,13 @@ pub fn replace_all(
         let m = caps.get(0).unwrap();
 
         new.push_str(&haystack[last_match..m.start()]);
-        new.push_str(&replacement(&haystack, &caps)?);
+        new.push_str(&replacement(haystack, &caps, options)?);
 
         last_match = m.end();
     }
 
     new.push_str(&haystack[last_match..]);
+    log::info!("haystack changed to {new} by regex replacement");
     Ok(new)
 }
 
@@ -27,7 +29,7 @@ mod tests {
 
     fn init() {
         dotenv::dotenv().ok();
-        env_logger::builder().init();
+        let _ = env_logger::try_init();
     }
 
     #[test]
@@ -36,10 +38,12 @@ mod tests {
 
         let haystack = "hello, world!";
         let re = Regex::new(r"world").unwrap();
-        let replacement =
-            |_haystack: &str, _caps: &Captures| -> Result<String, Error> { Ok("vahid".into()) };
+        let replacement = |_haystack: &str,
+                           _caps: &Captures,
+                           _options: &Option<bool>|
+         -> Result<String, Error> { Ok("vahid".into()) };
 
-        let result = replace_all(&re, haystack, &replacement).unwrap();
+        let result = replace_all(&re, haystack, replacement, &None).unwrap();
 
         assert_eq!("hello, vahid!", result.to_string())
     }

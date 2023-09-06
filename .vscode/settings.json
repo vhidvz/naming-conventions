@@ -6,7 +6,8 @@
     "msrv",
     "rustfmt",
     "rustup",
-    "vahid"
+    "vahid",
+    "vakili"
   ],
   "rust-analyzer.linkedProjects": ["./Cargo.toml"]
 }
